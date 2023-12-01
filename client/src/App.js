@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import NotFound from "./components/founderror/Notfound";
+
 import "./App.css";
 
 const App = () => {
@@ -14,23 +16,5 @@ const App = () => {
     </div>
   );
 };
-
-function NotFound() {
-  return (
-    <>
-      <h1>404 NOT FOUND!</h1>
-      <center>
-        <p>
-          Page does not exist.
-          <br />
-          Go to{" "}
-          <Link to="/" style={{ color: "black", textDecoration: "underline" }}>
-            Home
-          </Link>
-        </p>
-      </center>
-    </>
-  );
-}
 
 export default App;
