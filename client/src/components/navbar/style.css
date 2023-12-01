@@ -1,0 +1,81 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+nav {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  height: 11vh;
+  background: cadetblue;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  align-items: center;
+}
+nav .header {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+nav .header:hover {
+  cursor: pointer;
+}
+nav .navbar-links {
+  display: flex;
+  justify-content: end;
+  gap: 5rem;
+  cursor: pointer;
+}
+nav .navbar-links a {
+  font-size: 17px;
+  font-weight: normal;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+nav .navbar-links a:hover {
+  cursor: pointer;
+  color: black;
+}
+nav .burger-menu {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+.nav-active {
+  color: black;
+}
+
+.admin-links {
+  display: flex;
+  justify-content: start;
+  gap: 5rem;
+  cursor: pointer;
+}
+
+@media all and (max-width: 777px) {
+  nav .burger-menu {
+    display: block;
+  }
+  nav .navbar-links {
+    background-color: cadetblue;
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0px;
+    transform: translate(-700px);
+  }
+  nav .navbar-links li {
+    padding: 25px;
+    border-top: 3px solid white;
+  }
+}
