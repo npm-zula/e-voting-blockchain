@@ -2,6 +2,7 @@
 
 # auto generated after running >truffle migrate
 /src/contracts
+package-lock.json
 
 # dependencies
 /node_modules
