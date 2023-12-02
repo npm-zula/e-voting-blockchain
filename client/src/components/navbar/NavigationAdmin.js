@@ -4,14 +4,18 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export default function NavbarAdmin() {
+  const [open, setOpen] = useState(false);
   return (
     <nav>
       <div className="header">
         <NavLink to="/">
-          <i className="fab fa-bandcamp" /> Admin
+          <i className="fab fa-hive" /> Admin
         </NavLink>
       </div>
-      <ul className="admin-links">
+      <ul
+        className="navbar-links"
+        style={{ transform: open ? "translateX(0px)" : "" }}
+      >
         <li>
           <NavLink to="/Verification" activeClassName="nav-active">
             Verification
@@ -22,24 +26,23 @@ export default function NavbarAdmin() {
             Add Candidate
           </NavLink>
         </li>
-      </ul>
-      <ul className="navbar-links">
         <li>
           <NavLink to="/Registration" activeClassName="nav-active">
-            Registration
+            <i className="far fa-registered" /> Registration
           </NavLink>
         </li>
         <li>
           <NavLink to="/Voting" activeClassName="nav-active">
-            Voting
+            <i className="fas fa-vote-yea" /> Voting
           </NavLink>
         </li>
         <li>
           <NavLink to="/Results" activeClassName="nav-active">
-            Results
+            <i className="fas fa-poll-h" /> Results
           </NavLink>
         </li>
       </ul>
+      <i onClick={() => setOpen(!open)} className="fas fa-bars burger-menu"></i>
     </nav>
   );
 }
