@@ -1,0 +1,31 @@
+/* StartEnd.css */
+
+.container-main {
+    border-top: 1px solid;
+    margin-top: 0px;
+  }
+  
+  .container-item {
+    display: block;
+  }
+  
+  .attention {
+    display: block;
+  }
+  
+  button {
+    display: block;
+    padding: 21px;
+    margin: 7px;
+    min-width: max-content;
+    text-align: center;
+    width: 333px;
+    align-self: center;
+  }
+  
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
