@@ -3,8 +3,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 // Components
-import Navbar from "../Navbar/Navigation";
-import NavbarAdmin from "../Navbar/NavigationAdmin";
+// import Navbar from "../Navbar/Navigation";
+import Navbar from "../navbar/Navigation";
+import NavbarAdmin from "../navbar/NavigationAdmin";
 import NotInit from "../NotInit";
 
 // Contract

@@ -2,8 +2,8 @@
 import React, { Component } from "react";
 
 // Components
-import Navbar from "../Navbar/Navigation";
-import NavbarAdmin from "../Navbar/NavigationAdmin";
+import Navbar from "../navbar/Navigation";
+import NavbarAdmin from "../navbar/NavigationAdmin";
 import NotInit from "../NotInit";
 
 // CSS

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import Navbar from "../../Navbar/Navigation";
-import NavbarAdmin from "../../Navbar/NavigationAdmin";
+import Navbar from "../../navbar/Navigation";
+import NavbarAdmin from "../../navbar/NavigationAdmin";
 
 import AdminOnly from "../../AdminOnly";
 
