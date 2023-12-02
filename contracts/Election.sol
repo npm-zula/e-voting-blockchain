@@ -8,6 +8,12 @@ contract Election {
     bool start;
     bool end;
 
+// Event declarations
+    event CandidateAdded(uint256 candidateId, string header, string slogan);
+    event VoterRegistered(address voterAddress, string name);
+    event VoterVerified(address voterAddress, bool verifiedStatus);
+    event VoteCasted(address voterAddress, uint256 candidateId);
+    event ElectionStatusChanged(bool started, bool ended);
     constructor() public {
         // Initilizing default values
         admin = msg.sender;
@@ -51,6 +57,7 @@ contract Election {
             });
         candidateDetails[candidateCount] = newCandidate;
         candidateCount += 1;
+        emit CandidateAdded(candidateCount, _header, _slogan);
     }
 
     // Modeling a Election Details
@@ -83,6 +90,7 @@ contract Election {
         );
         start = true;
         end = false;
+        emit ElectionStatusChanged(start, end);
     }
 
     // Get Elections details
@@ -139,6 +147,7 @@ contract Election {
         voterDetails[msg.sender] = newVoter;
         voters.push(msg.sender);
         voterCount += 1;
+        emit VoterRegistered(msg.sender, _name);
     }
 
     // Verify voter
@@ -148,6 +157,7 @@ contract Election {
         onlyAdmin
     {
         voterDetails[voterAddress].isVerified = _verifedStatus;
+        emit VoterVerified(voterAddress, _verifedStatus);
     }
 
     // Vote
@@ -158,6 +168,7 @@ contract Election {
         require(end == false);
         candidateDetails[candidateId].voteCount += 1;
         voterDetails[msg.sender].hasVoted = true;
+        emit VoteCasted(msg.sender, candidateId);
     }
 
     // End election
@@ -175,3 +186,4 @@ contract Election {
         return end;
     }
 }
+
