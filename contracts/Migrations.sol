@@ -5,15 +5,27 @@ contract Migrations {
     address public owner;
     uint256 public last_completed_migration;
 
-    modifier restricted() {
-        if (msg.sender == owner) _;
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+    event MigrationCompleted(uint256 completed);
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Caller is not the owner");
+        _;
     }
 
-    constructor() public {
+    constructor() {
         owner = msg.sender;
+        emit OwnershipTransferred(address(0), msg.sender);
     }
 
-    function setCompleted(uint256 completed) public restricted {
+    function transferOwnership(address newOwner) public onlyOwner {
+        require(newOwner != address(0), "New owner is the zero address");
+        emit OwnershipTransferred(owner, newOwner);
+        owner = newOwner;
+    }
+
+    function setCompleted(uint256 completed) public onlyOwner {
         last_completed_migration = completed;
+        emit MigrationCompleted(completed);
     }
 }
