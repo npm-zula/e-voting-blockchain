@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import NotFound from "./components/founderror/Notfound";
 import Footer from "./components/Footer/Footer";
+import AddCandidate from "./components/Admin/AddCandidate/AddCandidate";
 
 import "./App.css";
 import Home from "./components/Home";
@@ -13,6 +14,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/AddCandidate" component={AddCandidate} />
           <Route exact path="*" component={NotFound} />
         </Switch>
       </Router>

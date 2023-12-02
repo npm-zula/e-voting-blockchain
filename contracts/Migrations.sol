@@ -13,7 +13,7 @@ contract Migrations {
         _;
     }
 
-    constructor() {
+    constructor() public {
         owner = msg.sender;
         emit OwnershipTransferred(address(0), msg.sender);
     }

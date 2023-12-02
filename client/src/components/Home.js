@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./navbar/Navbar";
-import NavbarAdmin from "./navbar/NavbarAdmin";
+import Navbar from "./Navbar/Navbar";
+import NavbarAdmin from "./Navbar/NavigationAdmin";
 const Home = () => {
   return (
     <div>

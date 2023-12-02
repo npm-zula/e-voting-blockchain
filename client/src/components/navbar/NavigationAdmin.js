@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import "./style.css";
+import "./Navbar.css";
 
 export default function NavbarAdmin() {
   return (
