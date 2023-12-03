@@ -1,0 +1,21 @@
+
+.container-main {
+    border-top: 1px solid;
+    margin-top: 0px;
+  }
+  
+  .election-status {
+    padding: 11px;
+    margin: 7px;
+    width: 100%;
+    border: 1px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 0.5em;
+    overflow: auto;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+  }
+  

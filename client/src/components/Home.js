@@ -7,9 +7,8 @@ import { Link } from "react-router-dom";
 import Navbar from "./navbar/Navigation";
 import NavbarAdmin from "./navbar/NavigationAdmin";
 import UserHome from "./home/Userhome";
-// import StartEnd from "./StartEnd";
 import ElectionDecider from "./electionDecider/ElectionDecider";
-import ElectionStatus from "./ElectionStatus";
+import ElectionStatus from "./electionStatus/ElectionStatus";
 
 // Contract
 import getWeb3 from "../getWeb3";
@@ -18,7 +17,6 @@ import Election from "../contracts/Election.json";
 // CSS
 import "./Home.css";
 
-// const buttonRef = React.createRef();
 export default class Home extends Component {
   constructor(props) {
     super(props);

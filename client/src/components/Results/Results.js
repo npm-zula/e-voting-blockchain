@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 // Components
 import Navbar from "../navbar/Navigation";
 import NavbarAdmin from "../navbar/NavigationAdmin";
-import NotInit from "../NotInit";
+// import NotInit from "../NotInit";
+import NotInit from "../electionDecider/Errorinit";
 
 // Contract
 import getWeb3 from "../../getWeb3";
