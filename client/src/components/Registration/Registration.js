@@ -4,7 +4,8 @@ import React, { Component } from "react";
 // Components
 import Navbar from "../navbar/Navigation";
 import NavbarAdmin from "../navbar/NavigationAdmin";
-import NotInit from "../NotInit";
+// import NotInit from "../NotInit";
+import NotInit from "../electionDecider/Errorinit";
 
 // CSS
 import "./Registration.css";
